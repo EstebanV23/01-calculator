@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Nanum+Gothic:wght@400;700;800&display=swap');
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-weight: bolder;
 }
 
 .container-main{
@@ -15,22 +18,27 @@
   background-color: #6D9886;
   padding: 1rem;
   border-radius: 1rem;
+  max-width: 463px;
 }
 
 .screen{
   width: 100%;
-  max-width: 700px;
-  min-width: 200px;
   min-height: 100px;
+  padding: 0px 6px;
+  overflow: auto;
   border-radius: 0.6rem;
   border: 3px solid rgb(87, 86, 86);
   background-color: #F7F7F7;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  font-size: 3rem;
+  margin: 0;
 }
 
 .main-buttons{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  justify-content: center;
   padding: 1rem 0;
   gap: 8px;
 }
@@ -45,6 +53,7 @@
   background-color: #fafafa;
   box-shadow: 3px 3px 0px rgb(87, 86, 86);
   cursor: pointer;
+  font-size: 2rem;
 }
 
 .button-number:active{
@@ -66,4 +75,30 @@
 
 .body-background{
   background-color: #393E46;
+}
+
+@media (max-width: 576px) {
+
+  .main-calculator{
+    border-radius: 1rem;
+    width: 90vw;
+  }
+
+  .screen{
+    min-height: none;
+    font-size: 2.5rem;
+    word-wrap: break-word;
+    overflow: hidden;
+  }
+  
+  .main-buttons{
+    display: grid;
+    grid-template-columns: repeat(4, 0.5fr);
+  }
+
+  .button-number{
+    padding: 1.4rem;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+  }
 }
